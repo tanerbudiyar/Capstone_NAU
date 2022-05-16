@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>price-checker</td>
+      <td>15 May 2022, 21:43</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">StepDef.HomePageStepDef.click_on_search_result()</td>
+              <td>2</td>
+              <td class="duration" data-value="8008500000">8.008</td>
+              <td class="duration" data-value="8008500000">8.467</td>
+              <td class="duration" data-value="16017000000">16.017</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDef.HomePageStepDef.click_on_used_books()</td>
+              <td>2</td>
+              <td class="duration" data-value="5243000000">5.243</td>
+              <td class="duration" data-value="5243000000">5.335</td>
+              <td class="duration" data-value="10486000000">10.486</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDef.HomePageStepDef.file_should_be_ready_to_send()</td>
+              <td>2</td>
+              <td class="duration" data-value="79000000">0.079</td>
+              <td class="duration" data-value="79000000">0.135</td>
+              <td class="duration" data-value="158000000">0.158</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDef.HomePageStepDef.the_user_clicks_on_search_button()</td>
+              <td>2</td>
+              <td class="duration" data-value="8174000000">8.174</td>
+              <td class="duration" data-value="8174000000">8.496</td>
+              <td class="duration" data-value="16348000000">16.348</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDef.HomePageStepDef.the_user_gets_book_info()</td>
+              <td>2</td>
+              <td class="duration" data-value="127000000">0.127</td>
+              <td class="duration" data-value="127000000">0.145</td>
+              <td class="duration" data-value="254000000">0.254</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDef.HomePageStepDef.the_user_gets_list_of_prices()</td>
+              <td>2</td>
+              <td class="duration" data-value="738000000">0.738</td>
+              <td class="duration" data-value="738000000">1.206</td>
+              <td class="duration" data-value="1476000000">1.476</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDef.HomePageStepDef.the_user_is_on_amazon_home_page()</td>
+              <td>2</td>
+              <td class="duration" data-value="7413500000">7.413</td>
+              <td class="duration" data-value="7413500000">7.669</td>
+              <td class="duration" data-value="14827000000">14.827</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDef.HomePageStepDef.the_user_provides_selected_book_isbn_title_as(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="5661500000">5.661</td>
+              <td class="duration" data-value="5661500000">6.009</td>
+              <td class="duration" data-value="11323000000">11.323</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDef.Hooks.setUp()</td>
+              <td>2</td>
+              <td class="duration" data-value="3410500000">3.410</td>
+              <td class="duration" data-value="3410500000">5.191</td>
+              <td class="duration" data-value="6821000000">6.821</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDef.Hooks.tearDown()</td>
+              <td>2</td>
+              <td class="duration" data-value="1041000000">1.041</td>
+              <td class="duration" data-value="1041000000">1.042</td>
+              <td class="duration" data-value="2082000000">2.082</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>10</td>
+            <td>20</td>
+            <td class="duration">3.989</td>
+            <td class="duration">16.348</td>
+            <td class="duration">1:19.792</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
